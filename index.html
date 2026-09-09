@@ -470,6 +470,7 @@ function selectOption(letter){
     }
   } else {
     (wrongPicked[current] = wrongPicked[current] || {})[letter] = true;  // 答错，停留并允许重答
+    renderNav();       // 立即刷新答题卡，让答错的题立刻标红
     renderQuestion();
   }
 }
